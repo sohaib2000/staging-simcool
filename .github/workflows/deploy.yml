@@ -45,8 +45,5 @@ jobs:
             echo "🚀 Restarting PM2 apps..."
             pm2 reload all --update-env || pm2 restart all
 
-            echo "🔁 Restarting PHP-FPM..."
-            systemctl restart php8.2-fpm || systemctl restart php-fpm
-
             echo "✅ Deploy completed successfully"
           EOF
