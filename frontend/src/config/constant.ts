@@ -19,8 +19,8 @@ const getHostname = (): string => {
 };
 
 const buildUrls = (hostname: string) => {
-    const frontBaseUrl = `https://${hostname}`;
-    const baseUrl = `https://admin.${hostname}`;
+    const frontBaseUrl = `https://staging.simcool.io`;
+    const baseUrl = `https://admin-staging.simcool.io`;
     const apiUrl = `${baseUrl}/api`;
 
     return {
