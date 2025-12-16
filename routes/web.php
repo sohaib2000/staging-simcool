@@ -22,13 +22,19 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\InstallerController;
 use App\Http\Controllers\MasterController as ControllersMasterController;
+use Illuminate\Support\Facades\Mail;
 
 require __DIR__ . '/auth.php';
 
 Route::get('/api/csrf-token', function () {
     return response()->json(['csrf_token' => csrf_token()]);
 });
-
+Route::get('/test-mail', function () {
+    Mail::raw('Brevo test email', function ($m) {
+        $m->to('jado2here@gmail.com')->subject('Brevo OK');
+    });
+    return 'Sent';
+});
 Route::get('/admin/login', [LoginController::class, 'login'])->name('admin.login');
 Route::get('/admin',function () {
 	   return redirect()->route('admin.login');
