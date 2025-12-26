@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{asset('frontend/styles.css')}}">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{asset(systemflag('favicon'))}}">
+    <meta name="robots" content="noindex, nofollow">
 </head>
 
 <body>
